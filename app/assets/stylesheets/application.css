@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ #fullscreen-image {
+    width: 100vw;  /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+  }
