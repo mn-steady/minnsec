@@ -19,6 +19,9 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
+#Devise for authentication
+gem 'devise'
+
 # Administrate fields for active storage
 gem 'administrate', '~> 0.18.0'
 gem 'administrate-field-active_storage', '~> 0.4.2'
