@@ -3,17 +3,19 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: <%= ENV['PG_USERNAME'] || 'your_username' %>  # Use env var or a default username
-  password: <%= ENV['PG_PASSWORD'] || 'your_password' %>  # Use env var or a default password
 
 
 development:
   <<: *default
   database: minnsec_development 
+  adapter: postgresql
+  username: user
 
 test:
   <<: *default
-  database: minnsec_test        
+  database: minnsec_test     
+  adapter: postgresql
+  username: user   
 
 production:
   <<: *default
