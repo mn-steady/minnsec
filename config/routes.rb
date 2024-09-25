@@ -10,13 +10,18 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Defines the root path route ("/")
-  # root "posts#index"
+  devise_scope :user do
+    get "signup", to: "devise/registrations#new"
+    get "login", to: "devise/sessions#new"
+    get "logout", to: "devise/sessions#destroy"
+  end
 
+  # Authenticated user root route (adjust to the correct controller/action)
   authenticated :user do
-    root 'home#index', as: :authenticated_root  # Adjust to your home controller/view
+    root 'home#index', as: :authenticated_root
   end
   
+  # Unauthenticated user root route (Devise login page)
   unauthenticated do
     root 'devise/sessions#new', as: :unauthenticated_root
   end
