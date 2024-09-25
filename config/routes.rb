@@ -1,29 +1,27 @@
 Rails.application.routes.draw do
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  # Reveal health status on /up
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Render dynamic PWA files from app/views/pwa/*
+  # PWA dynamic routes
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
+  # Devise-specific routes for login, signup, logout
   devise_scope :user do
     get "signup", to: "devise/registrations#new"
     get "login", to: "devise/sessions#new"
-    get "logout", to: "devise/sessions#destroy"
+    delete "logout", to: "devise/sessions#destroy"
   end
 
-  # Authenticated user root route (adjust to the correct controller/action)
+  # Authenticated users root route
   authenticated :user do
     root 'home#index', as: :authenticated_root
   end
-  
-  # Unauthenticated user root route (Devise login page)
+
+  # Unauthenticated users root route
   unauthenticated do
     root 'devise/sessions#new', as: :unauthenticated_root
   end
-  
 end
