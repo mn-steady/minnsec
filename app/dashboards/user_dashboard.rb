@@ -38,14 +38,15 @@ class UserDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    id
-    email
-    encrypted_password
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    created_at
-    updated_at
+    id: Field::Number,
+    email: Field::String,
+    encrypted_password: Field::String,
+    remember_created_at: Field::DateTime,
+    reset_password_sent_at: Field::DateTime,
+    reset_password_token: Field::String,
+    created_at: Field::DateTime,
+    updated_at: Field::DateTime,
+    admin: Field::Boolean,
   ].freeze
 
   # FORM_ATTRIBUTES
