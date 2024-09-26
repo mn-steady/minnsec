@@ -28,11 +28,10 @@ class UserDashboard < Administrate::BaseDashboard
     id
     email
     encrypted_password
-    remember_created_at
     reset_password_sent_at
-    reset_password_token
     created_at
     updated_at
+    admin
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -46,6 +45,7 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_token
     created_at
     updated_at
+    admin
   ].freeze
 
   # FORM_ATTRIBUTES
