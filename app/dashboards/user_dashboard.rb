@@ -24,10 +24,15 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    id
-    email
-    encrypted_password
-    remember_created_at
+    id: Field::Number,
+    email: Field::String,
+    encrypted_password: Field::String,
+    remember_created_at: Field::DateTime,
+    reset_password_sent_at: Field::DateTime,
+    reset_password_token: Field::String,
+    created_at: Field::DateTime,
+    updated_at: Field::DateTime,
+    admin: Field::Boolean,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
