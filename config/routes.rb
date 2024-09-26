@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   # Unauthenticated users root route
   unauthenticated do
-    root 'devise/sessions#new', as: :unauthenticated_root
+    root 'home#index', as: :unauthenticated_root
   end
 
   # Authenticated users root route
