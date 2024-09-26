@@ -1,1 +1,5 @@
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to "Admin Dashboard", admin_root_path %>
+<% end %>
+
 <%= image_tag "rocket.gif", id: "fullscreen-image"%>
