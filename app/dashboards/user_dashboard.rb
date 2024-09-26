@@ -28,8 +28,10 @@ class UserDashboard < Administrate::BaseDashboard
     email
     encrypted_password
     remember_created_at
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    reset_password_sent_at
+    reset_password_token
+    created_at
+    updated_at
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
