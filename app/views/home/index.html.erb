@@ -4,11 +4,11 @@
 <% end %>
 
 <% if user_signed_in? %>
-  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
 
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to "Admin Dashboard", admin_root_path %>
 <% end %>
 
-  <%= image_tag "rocket.gif", id: "fullscreen-image"%>
+<%= image_tag "rocket.gif", id: "fullscreen-image"%>

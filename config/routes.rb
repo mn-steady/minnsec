@@ -1,33 +1,33 @@
 Rails.application.routes.draw do
+  # Admin namespace
   namespace :admin do
-      resources :users
+    resources :users
+    root to: "users#index"
+  end
 
-      root to: "users#index"
-    end
+  # Devise routes
   devise_for :users, controllers: { sessions: 'devise/sessions' }
 
-  # Reveal health status on /up
+  devise_scope :user do
+    get "signup", to: "devise/registrations#new"
+    get "login", to: "devise/sessions#new"
+    delete "logout", to: "devise/sessions#destroy" # Custom logout route
+  end
+
+  # Health check
   get "up" => "rails/health#show", as: :rails_health_check
 
   # PWA dynamic routes
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Devise-specific routes for login, signup, logout
-  devise_scope :user do
-    get "signup", to: "devise/registrations#new"
-    get "login", to: "devise/sessions#new"
-    delete "logout", to: "devise/sessions#destroy"
-  end
-
-  # Unauthenticated users root route
+  # Unauthenticated root route
   unauthenticated do
     root 'home#index', as: :unauthenticated_root
   end
 
-  # Authenticated users root route
+  # Authenticated root route
   authenticated :user do
     root 'home#index', as: :authenticated_root
   end
-
 end
