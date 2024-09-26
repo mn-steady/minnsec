@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
-    # Ensure Devise mapping is correctly set
-    @request.env["devise.mapping"] = Devise.mappings[:user]
-    # Your logic here
+    # Debug output to inspect the request environment and devise mappings
+    #Rails.logger.debug "Devise mapping: #{request.env['devise.mapping']}"
+    #Rails.logger.debug "Current user: #{current_user.inspect}"
   end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'devise/sessions' }
 
   # Reveal health status on /up
   get "up" => "rails/health#show", as: :rails_health_check
@@ -15,13 +15,14 @@ Rails.application.routes.draw do
     delete "logout", to: "devise/sessions#destroy"
   end
 
+  # Unauthenticated users root route
+  unauthenticated do
+    root 'devise/sessions#new', as: :unauthenticated_root
+  end
+
   # Authenticated users root route
   authenticated :user do
     root 'home#index', as: :authenticated_root
   end
 
-  # Unauthenticated users root route
-  unauthenticated do
-    root 'devise/sessions#new', as: :unauthenticated_root
-  end
 end
