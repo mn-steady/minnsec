@@ -6,11 +6,11 @@
 # you're free to overwrite the RESTful controller actions.
 module Admin
   class ApplicationController < Administrate::ApplicationController
-    before_action :authenticate_admin
+    before_action :require_admin
 
-    def authenticate_admin
+    def require_admin
       unless current_user&.admin?
-        redirect_to root_path, alert: "You are not authorized to access this page."
+        redirect_to authenticated_root_path, alert: "You are not authorized to access this page."
       end
     end
 
