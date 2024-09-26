@@ -24,12 +24,10 @@ class UserDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
-    id: Field::Number,
-    email: Field::String,
-    encrypted_password: Field::String,
-    remember_created_at: Field::DateTime,
-    reset_password_sent_at: Field::DateTime,
-    reset_password_token: Field::String,
+    id
+    email
+    encrypted_password
+    remember_created_at
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   ].freeze
@@ -37,14 +35,14 @@ class UserDashboard < Administrate::BaseDashboard
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
-    id: Field::Number,
-    email: Field::String,
-    encrypted_password: Field::String,
-    remember_created_at: Field::DateTime,
-    reset_password_sent_at: Field::DateTime,
-    reset_password_token: Field::String,
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    id
+    email
+    encrypted_password
+    remember_created_at
+    reset_password_sent_at
+    reset_password_token
+    created_at
+    updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
