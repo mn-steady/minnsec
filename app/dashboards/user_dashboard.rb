@@ -32,7 +32,6 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_token: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    admin: Field::Boolean,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -46,7 +45,6 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_token: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    admin: Field::Boolean,
   ].freeze
 
   # FORM_ATTRIBUTES
