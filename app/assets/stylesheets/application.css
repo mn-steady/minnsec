@@ -83,13 +83,22 @@ body, html {
   padding: 0px; /* Optional: add padding if needed */
 }
 
-/* Extend background color for login and sign-up pages */
+/* Center login and sign-up forms */
 body.sessions.new, body.registrations.new {
   background-color: #50b948; /* Green background for login and sign-up pages */
   min-height: 100vh; /* Ensure background color covers full height of viewport */
   display: flex;
-  align-items: center; /* Vertically center the content if needed */
-  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+.form-container {
+  background-color: #fff; /* Optional: white background for the form */
+  padding: 20px; /* Padding inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 400px; /* Set a max width for the form */
+  width: 100%; /* Ensure the form is responsive */
 }
 
 /* Hamburger menu button for mobile */
