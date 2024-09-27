@@ -23,6 +23,22 @@
   <p class="alert"><%= alert %></p>
 
   <body>
-    <%= yield %>
+    <!-- Menu Bar -->
+    <header id="menu-bar">
+      <nav class="navbar">
+        <ul>
+          <li><%= link_to 'Login', new_user_session_path unless user_signed_in? %></li>
+          <li><%= link_to 'Sign Up', new_user_session_path unless user_signed_in? %></li>
+          <li><%= link_to 'Admin Dashboard', admin_root_path if user_signed_in? && current_user.admin?  %></li>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete if user_signed_in? %></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
