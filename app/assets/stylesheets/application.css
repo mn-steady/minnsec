@@ -30,36 +30,31 @@ body {
   position: fixed; /* Anchors the menu at the top */
   top: 0;
   width: 100%;
-  background-color: rgb(1c, 1e, 22); /* Background color of the menu bar */
+  background-color: #1c1e22; /* Background color of the menu bar */
   z-index: 1000; /* Ensures the menu is on top of other content */
-  padding: 10px 20px; /* Adds space inside the menu bar */
-}
-
-/* Align the navbar items (logo and links) */
-#menu-bar .navbar {
+  padding: 10px 20px; /* Adds padding around the menu bar */
   display: flex;
-  justify-content: space-between; /* Logo on the left, links on the right */
-  align-items: center; /* Vertically centers both the logo and the links */
-  width: 100%; /* Make sure the navbar takes full width */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Vertically center the items */
 }
 
 /* Logo styling */
 #menu-bar .navbar-logo img {
-  max-height: 50px; /* Control the logo size */
-  width: auto; /* Keep the aspect ratio */
+  max-height: 50px; /* Adjust logo height */
+  width: auto; /* Maintain aspect ratio */
 }
 
-/* Align the navbar items properly */
+/* Style for the navigation links */
 #menu-bar .navbar ul {
   list-style: none; /* Remove bullet points */
   margin: 0;
   padding: 0;
   display: flex; /* Display list items in a row */
-  align-items: center; /* Vertically center links */
+  align-items: center; /* Vertically center the links */
 }
 
 #menu-bar .navbar ul li {
-  margin-left: 20px; /* Space between menu items */
+  margin-left: 20px; /* Space between each link */
 }
 
 #menu-bar .navbar ul li a {
@@ -77,5 +72,5 @@ body {
 
 /* Push content down so it's not hidden under the fixed menu */
 .container {
-  margin-top: 70px; /* Adjust this based on your menu height */
+  margin-top: 70px; /* Adjust based on your menu height */
 }
