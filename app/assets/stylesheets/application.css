@@ -109,6 +109,7 @@ body.sessions.new, body.registrations.new {
   border: none;
   color: #50b948; /* Same neon green */
   cursor: pointer;
+  padding-right: 20px; /* Add padding to the right */
 }
 
 /* Mobile responsiveness */
@@ -138,6 +139,7 @@ body.sessions.new, body.registrations.new {
     display: flex; /* Display links as flex */
     flex-direction: column; /* Stack links vertically */
     align-items: flex-end; /* Align links to the right */
+    padding-right: 20px; /* Add padding to keep links aligned with hamburger */
   }
 
   #menu-bar .navbar ul li {
