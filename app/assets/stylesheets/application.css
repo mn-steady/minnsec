@@ -139,7 +139,7 @@ body.sessions.new, body.registrations.new {
     display: flex; /* Display links as flex */
     flex-direction: column; /* Stack links vertically */
     align-items: flex-end; /* Align links to the right */
-    padding-right: 20px; /* Add padding to keep links aligned with hamburger */
+    padding-right: 5px; /* Add padding to keep links aligned with hamburger */
   }
 
   #menu-bar .navbar ul li {
