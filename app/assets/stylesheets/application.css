@@ -35,8 +35,8 @@ body, html {
 
 /* Logo styling */
 #menu-bar .navbar-logo {
-  display: flex; /* Ensure logo and text are aligned side by side */
-  align-items: center; /* Vertically center the logo and text */
+  display: flex; /* Align logo and text horizontally */
+  align-items: center; /* Vertically center both the logo and the text */
 }
 
 #menu-bar .navbar-logo img {
@@ -44,14 +44,12 @@ body, html {
   width: auto; /* Maintain aspect ratio */
 }
 
-/* Static text styling */
+/* Text next to the logo styled like the navigation links */
 #menu-bar .navbar-text {
-  font-size: 24px; /* Adjust the size of the MinnSec text */
-  font-weight: bold; /* Bold text */
+  font-size: 18px; /* Same size as navigation links */
+  font-weight: bold; /* Bold to match the links */
   color: #50b948; /* Same neon green color as the links */
-  margin-left: 10px; /* Space between logo and text */
-  display: flex;
-  align-items: center; /* Vertically center the text */
+  margin-left: 10px; /* Space between the logo and the text */
 }
 
 /* Style for the navigation links */
