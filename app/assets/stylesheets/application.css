@@ -34,9 +34,24 @@ body, html {
 }
 
 /* Logo styling */
+#menu-bar .navbar-logo {
+  display: flex; /* Ensure logo and text are aligned side by side */
+  align-items: center; /* Vertically center the logo and text */
+}
+
 #menu-bar .navbar-logo img {
   max-height: 50px; /* Adjust logo height */
   width: auto; /* Maintain aspect ratio */
+}
+
+/* Static text styling */
+#menu-bar .navbar-text {
+  font-size: 24px; /* Adjust the size of the MinnSec text */
+  font-weight: bold; /* Bold text */
+  color: #50b948; /* Same neon green color as the links */
+  margin-left: 10px; /* Space between logo and text */
+  display: flex;
+  align-items: center; /* Vertically center the text */
 }
 
 /* Style for the navigation links */
@@ -67,7 +82,7 @@ body, html {
 }
 
 #menu-bar .navbar ul li a:hover {
-  color: #50b948; /* Lighter neon green on hover */
+  color: #00ff00; /* Lighter neon green on hover */
 }
 
 /* Default container background color */
