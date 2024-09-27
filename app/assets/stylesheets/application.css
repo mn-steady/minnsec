@@ -18,6 +18,8 @@ body, html {
   padding: 0;
   min-height: 100%; /* Ensure body extends to at least full height of viewport */
   background-color: #50b948; /* Default background color */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Styles for the Menu Bar */
@@ -88,19 +90,34 @@ body.sessions.new, body.registrations.new {
   background-color: #50b948; /* Green background for login and sign-up pages */
   min-height: 100vh; /* Ensure background color covers full height of viewport */
   display: flex;
-  align-items: center; /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
-  padding: 20px; /* Add padding to prevent content from touching the edges on smaller screens */
-  margin: 0; /* Remove any default margin */
+  align-items: center; /* Vertically center the content */
 }
 
 .form-container {
-  background-color: #50b948; /* White background for the form */
+  background-color: #50b948; /* Green background for the form */
   padding: 20px; /* Padding inside the form */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   max-width: 400px; /* Set a max width for the form */
   width: 100%; /* Ensure the form is responsive */
+  box-sizing: border-box; /* Include padding in the element's width and height */
+  color: #fff; /* White text color for contrast */
+}
+
+/* Style form labels and input fields */
+.form-container label {
+  color: #fff; /* White label text */
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 /* Hamburger menu button for mobile */
