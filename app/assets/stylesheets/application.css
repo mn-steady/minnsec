@@ -68,3 +68,8 @@ body {
 .container {
   margin-top: 40px; /* Adjust this based on your menu height */
 }
+
+#menu-bar .navbar-logo img {
+  width: 50px; /* Set a fixed width, adjust based on your preference */
+  height: auto; /* Maintain aspect ratio */
+}
