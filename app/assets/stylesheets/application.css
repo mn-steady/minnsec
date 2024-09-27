@@ -5,16 +5,11 @@
  * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
 
-#fullscreen-image {
+ #fullscreen-image {
   width: 100vw;  /* 100% of the viewport width */
   height: 100vh; /* 100% of the viewport height */
   object-fit: cover; /* Ensures the image covers the entire area without distortion */
@@ -70,9 +65,14 @@ body {
   color: #50b948; /* Lighter neon green on hover */
 }
 
-/* Push content down so it's not hidden under the fixed menu */
+/* Default background color for container */
 .container {
   background-color: #50b948; /* Set the background to #50b948 */
   margin-top: 70px; /* Ensure content isn't hidden under the fixed menu */
   padding: 0px; /* Optional: add padding if needed */
+}
+
+/* Background color for login and sign-up pages */
+body.sessions.new, body.registrations.new {
+  background-color: #50b948; /* Green background for login and sign-up pages */
 }
