@@ -108,6 +108,8 @@ body.sessions.new, body.registrations.new {
   border: none;
   color: #50b948; /* Same neon green */
   cursor: pointer;
+  padding-right: 20px; /* Add padding to the right when closed */
+  transition: padding-right 0.3s ease; /* Smooth transition for padding */
 }
 
 /* Mobile responsiveness */
@@ -130,6 +132,11 @@ body.sessions.new, body.registrations.new {
     flex-direction: column;
     align-items: flex-end; /* Keep links aligned to the right on mobile */
     width: 100%;
+  }
+
+  /* When the menu is active, reduce padding on the right */
+  #navbar-links.active ~ .navbar-toggler {
+    padding-right: 5px; /* Reduce padding to bring the hamburger closer to links */
   }
 
   /* Show the navbar links when "active" class is added */
