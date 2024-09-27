@@ -27,7 +27,7 @@ body, html {
   width: 100%;
   background-color: #1c1e22; /* Background color of the menu bar */
   z-index: 1000; /* Ensures the menu is on top of other content */
-  padding: 5px 15px; /* Adds padding around the menu bar */
+  padding: 0px 15px; /* Adds padding around the menu bar */
   display: flex;
   justify-content: space-between; /* Space between logo and links */
   align-items: center; /* Vertically center the items */
