@@ -74,5 +74,5 @@ body {
 .container {
   background-color: #50b948; /* Set the background to #50b948 */
   margin-top: 70px; /* Ensure content isn't hidden under the fixed menu */
-  padding: 20px; /* Optional: add padding if needed */
+  padding: 0px; /* Optional: add padding if needed */
 }
