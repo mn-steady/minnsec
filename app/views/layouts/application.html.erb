@@ -9,7 +9,6 @@
 
     <%= yield :head %>
 
-
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<%= asset_path('favicon.ico') %>">
 
@@ -18,18 +17,19 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
 
   </head>
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
   <body>
+    <!-- Alerts and Notices -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <!-- Menu Bar -->
     <header id="menu-bar">
       <nav class="navbar">
         <ul>
           <li><%= link_to 'Login', new_user_session_path unless user_signed_in? %></li>
-          <li><%= link_to 'Sign Up', new_user_session_path unless user_signed_in? %></li>
-          <li><%= link_to 'Admin Dashboard', admin_root_path if user_signed_in? && current_user.admin?  %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path unless user_signed_in? %></li>
+          <li><%= link_to 'Admin Dashboard', admin_root_path if user_signed_in? && current_user.admin? %></li>
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete if user_signed_in? %></li>
         </ul>
       </nav>

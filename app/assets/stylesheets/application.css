@@ -20,6 +20,11 @@
   object-fit: cover; /* Ensures the image covers the entire area without distortion */
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* Styles for the Menu Bar */
 #menu-bar {
   position: fixed; /* Anchors the menu at the top */
@@ -61,5 +66,5 @@
 
 /* Push content down so it's not hidden under the fixed menu */
 .container {
-  margin-top: 60px; /* Adjust this based on your menu height */
+  margin-top: 10px; /* Adjust this based on your menu height */
 }
