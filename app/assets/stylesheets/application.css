@@ -79,7 +79,7 @@ body, html {
 /* Default container background color */
 .container {
   background-color: #50b948; /* Set the background to #50b948 */
-  margin-top: 70px; /* Ensure content isn't hidden under the fixed menu */
+  margin-top: 60px; /* Ensure content isn't hidden under the fixed menu */
   padding: 0px; /* Optional: add padding if needed */
 }
 
