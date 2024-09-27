@@ -31,6 +31,7 @@ body, html {
   display: flex;
   justify-content: space-between; /* Space between logo and links */
   align-items: center; /* Vertically center the items */
+  flex-wrap: nowrap; /* Prevent items from wrapping on large screens */
 }
 
 /* Logo styling */
@@ -59,6 +60,7 @@ body, html {
   padding: 0;
   display: flex; /* Display list items in a row */
   align-items: center; /* Vertically center the links */
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 #menu-bar .navbar ul li {
@@ -97,4 +99,32 @@ body.sessions.new, body.registrations.new {
   display: flex;
   align-items: center; /* Vertically center the content if needed */
   justify-content: center; /* Center the content horizontally */
+}
+
+/* Mobile responsiveness: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  #menu-bar {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 10px; /* Reduce padding */
+  }
+
+  /* Stack the logo, text, and navigation links */
+  #menu-bar .navbar-logo {
+    margin-bottom: 10px; /* Add space between the logo and the nav links */
+  }
+
+  #menu-bar .navbar ul {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: flex-start; /* Align links to the left */
+    width: 100%; /* Ensure full width on mobile */
+  }
+
+  #menu-bar .navbar ul li {
+    margin-left: 0; /* Remove left margin between links */
+    margin-bottom: 10px; /* Add space between links */
+  }
+
+  #menu-bar .navbar ul li:last-child {
+    margin-right: 0; /* Remove right margin */
+  }
 }
