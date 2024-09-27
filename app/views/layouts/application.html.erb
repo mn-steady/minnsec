@@ -28,23 +28,25 @@
       <div class="navbar-logo">
         <!-- Logo -->
         <%= link_to image_tag('minnsec-logo-small.png', alt: 'MinnSec Logo', class: 'logo'), root_path %>
-
         <!-- Static text next to logo -->
         <span class="navbar-text">MinnSec</span>
       </div>
 
-      <!-- Hamburger icon for mobile -->
+      <!-- Hamburger icon with "Menu" text for mobile -->
       <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation">
-        &#9776; <!-- Hamburger icon -->
+        &#9776; Menu
       </button>
 
-      <!-- Navigation Links -->
+      <!-- Navigation Links (to be shown on click for mobile) -->
       <nav class="navbar" id="navbar-links">
         <ul>
-          <li><%= link_to 'Login', new_user_session_path unless user_signed_in? %></li>
-          <li><%= link_to 'Sign Up', new_user_registration_path unless user_signed_in? %></li>
-          <li><%= link_to 'Admin', admin_root_path if user_signed_in? && current_user.admin? %></li>
-          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete if user_signed_in? %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to 'Admin Dashboard', admin_root_path if current_user.admin? %></li>
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'Login', new_user_session_path %></li>
+            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <% end %>
         </ul>
       </nav>
     </header>
