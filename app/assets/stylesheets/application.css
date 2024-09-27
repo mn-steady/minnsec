@@ -45,14 +45,6 @@ body, html {
   width: auto; /* Maintain aspect ratio */
 }
 
-/* Text next to the logo styled like the navigation links */
-#menu-bar .navbar-text {
-  font-size: 18px; /* Same size as navigation links */
-  font-weight: bold; /* Bold to match the links */
-  color: #50b948; /* Same neon green color as the links */
-  margin-left: 10px; /* Space between the logo and the text */
-}
-
 /* Style for the navigation links */
 #menu-bar .navbar ul {
   list-style: none; /* Remove bullet points */
