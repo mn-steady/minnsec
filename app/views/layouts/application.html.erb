@@ -22,15 +22,16 @@
     <!-- Alerts and Notices -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
     <!-- Menu Bar -->
     <header id="menu-bar">
+      <!-- Logo on the left -->
+      <div class="navbar-logo">
+        <%= link_to image_tag('logo.png', alt: 'Your Logo', class: 'logo'), root_path %>
+      </div>
+
+      <!-- Links on the right -->
       <nav class="navbar">
         <ul>
-          <!-- Logo on the left -->
-          <li class="navbar-logo">
-            <%= link_to image_tag('minnsec-logo-small.png', alt: 'Logo', class: 'logo'), root_path %>
-          </li>
           <li><%= link_to 'Login', new_user_session_path unless user_signed_in? %></li>
           <li><%= link_to 'Sign Up', new_user_registration_path unless user_signed_in? %></li>
           <li><%= link_to 'Admin Dashboard', admin_root_path if user_signed_in? && current_user.admin? %></li>
