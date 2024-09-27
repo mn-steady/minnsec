@@ -58,7 +58,7 @@ body {
 }
 
 #menu-bar .navbar ul li a {
-  color: #39ff14; /* Neon green text */
+  color: #50b948; /* Neon green text */
   text-decoration: none;
   font-weight: bold; /* Bold text */
   font-size: 18px; /* Adjust size as needed */
@@ -67,7 +67,7 @@ body {
 }
 
 #menu-bar .navbar ul li a:hover {
-  color: #00ff00; /* Lighter neon green on hover */
+  color: #50b948; /* Lighter neon green on hover */
 }
 
 /* Push content down so it's not hidden under the fixed menu */
