@@ -35,9 +35,17 @@ body {
   padding: 10px 0;
 }
 
+/* Align the navbar items and logo */
 #menu-bar .navbar {
   display: flex;
-  justify-content: center; /* Centers the navbar items */
+  justify-content: space-between; /* Spaces the logo and menu items */
+  align-items: center; /* Vertically centers both the logo and the links */
+  padding: 0 20px; /* Adds space on the sides */
+}
+
+#menu-bar .navbar-logo img {
+  width: 50%; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
 }
 
 #menu-bar .navbar ul {
@@ -69,7 +77,4 @@ body {
   margin-top: 40px; /* Adjust this based on your menu height */
 }
 
-#menu-bar .navbar-logo img {
-  width: 50px; /* Set a fixed width, adjust based on your preference */
-  height: auto; /* Maintain aspect ratio */
-}
+
