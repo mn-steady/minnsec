@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   def admin?
     admin # This will return true or false based on the admin attribute
-  end 
+  end
 end

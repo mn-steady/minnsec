@@ -76,18 +76,18 @@ Rails.application.configure do
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "minnsec_production"
 
-  #Config of SendGrid for Email notifications
+  # Config of SendGrid for Email notifications
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    user_name: 'apikey', 
-    password: ENV['SENDGRID_API_KEY'], 
-    domain: 'minnsec.com', 
-    address: 'smtp.sendgrid.net',
+    user_name: "apikey",
+    password: ENV["SENDGRID_API_KEY"],
+    domain: "minnsec.com",
+    address: "smtp.sendgrid.net",
     port: 587,
     authentication: :plain,
     enable_starttls_auto: true
   }
-  
+
 
   # Disable caching for Action Mailer templates even if Action Controller
   # caching is enabled.
@@ -114,5 +114,4 @@ Rails.application.configure do
   # ]
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
-
 end

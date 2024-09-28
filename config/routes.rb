@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   # Devise routes
-  devise_for :users, controllers: { sessions: 'devise/sessions' }
+  devise_for :users, controllers: { sessions: "devise/sessions" }
 
   devise_scope :user do
     get "signup", to: "devise/registrations#new"
@@ -22,15 +22,15 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Default root route for all users
-  root to: 'home#index' # This will handle both authenticated and unauthenticated cases
+  root to: "home#index" # This will handle both authenticated and unauthenticated cases
 
   # Unauthenticated root route
   unauthenticated do
-    root 'home#index', as: :unauthenticated_root
+    root "home#index", as: :unauthenticated_root
   end
 
   # Authenticated root route
   authenticated :user do
-    root 'home#index', as: :authenticated_root
+    root "home#index", as: :authenticated_root
   end
 end

@@ -16,7 +16,7 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_token: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    admin: Field::Boolean,
+    admin: Field::Boolean
   }.freeze
 
   # COLLECTION_ATTRIBUTES
