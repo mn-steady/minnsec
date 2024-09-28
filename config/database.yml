@@ -12,11 +12,13 @@ development:
   password: <%= ENV['minnsec_DATABASE_PASSWORD'] %>
 
 test:
-  <<: *default
-  database: minnsec_test     
   adapter: postgresql
-  username: minnsec
-  password: <%= ENV['minnsec_DATABASE_PASSWORD'] %>
+  encoding: unicode
+  database: minnsec_test
+  pool: 5
+  username: postgres
+  password: postgres
+  host: localhost
 
 production:
   <<: *default
