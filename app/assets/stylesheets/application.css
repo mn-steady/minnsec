@@ -78,7 +78,7 @@ body, html {
 
 /* Default container background color and centering */
 .container {
-  background-color: #50b948; /* Set the background to #50b948 */
+  background-color: #1c1e22; /* Set the background to #50b948 */
   margin-top: 50px; /* Ensure content isn't hidden under the fixed menu */
   padding: 0px; /* Optional: add padding if needed */
   display: flex;
@@ -89,64 +89,12 @@ body, html {
 
 /* Form container styling */
 .form-container {
-  background-color: #1c1e22; /* Dark background for the form */
+  background-color: #1c1e22; /* Green background for the form */
   padding: 20px; /* Padding inside the form */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   max-width: 400px; /* Set a max width for the form */
   width: 100%; /* Ensure the form is responsive */
-}
-
-/* Apply neon green color to form labels, inputs, and buttons */
-.form-container label,
-.form-container input,
-.form-container textarea,
-.form-container select {
-  color: #50b948; /* Neon green text */
-}
-
-/* Style for form inputs and textareas */
-.form-container input,
-.form-container textarea,
-.form-container select {
-  background-color: #1c1e22; /* Dark background for inputs */
-  border: 2px solid #50b948; /* Neon green border */
-  padding: 10px;
-  border-radius: 5px;
-  width: 100%; /* Full width for inputs */
-  box-sizing: border-box; /* Ensure padding is included in width */
-  color: #50b948; /* Neon green text color */
-}
-
-/* Placeholder text color */
-.form-container input::placeholder,
-.form-container textarea::placeholder {
-  color: rgba(80, 185, 72, 0.7); /* Lighter neon green for placeholder text */
-}
-
-/* Submit button styling */
-.form-container input[type="submit"] {
-  background-color: #50b948; /* Neon green background */
-  color: #1c1e22; /* Dark text color */
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-/* Submit button hover effect */
-.form-container input[type="submit"]:hover {
-  background-color: #00ff00; /* Lighter neon green on hover */
-}
-
-/* Focus state for inputs */
-.form-container input:focus,
-.form-container textarea:focus,
-.form-container select:focus {
-  outline: none; /* Remove default focus outline */
-  border-color: #00ff00; /* Lighter neon green on focus */
 }
 
 /* Hamburger menu button for mobile */
