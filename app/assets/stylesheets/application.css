@@ -81,6 +81,9 @@ body, html {
   background-color: #50b948; /* Set the background to #50b948 */
   margin-top: 50px; /* Ensure content isn't hidden under the fixed menu */
   padding: 0px; /* Optional: add padding if needed */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
 }
 
 /* Center login and sign-up forms */
