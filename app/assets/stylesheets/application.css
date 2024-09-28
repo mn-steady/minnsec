@@ -76,7 +76,7 @@ body, html {
   color: #00ff00; /* Lighter neon green on hover */
 }
 
-/* Default container background color */
+/* Default container background color and centering */
 .container {
   background-color: #50b948; /* Set the background to #50b948 */
   margin-top: 50px; /* Ensure content isn't hidden under the fixed menu */
@@ -84,21 +84,12 @@ body, html {
   display: flex;
   align-items: center; /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
+  min-height: 100vh; /* Ensure container stretches to full viewport height */
 }
 
-/* Center login and sign-up forms */
-body.sessions.new, body.registrations.new {
-  background-color: #50b948; /* Green background for login and sign-up pages */
-  min-height: 100vh; /* Ensure background color covers full height of viewport */
-  display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
-  padding: 20px; /* Add padding to prevent content from touching the edges on smaller screens */
-  margin: 0; /* Remove any default margin */
-}
-
+/* Form container styling */
 .form-container {
-  background-color: #50b948; /* White background for the form */
+  background-color: #50b948; /* Green background for the form */
   padding: 20px; /* Padding inside the form */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
