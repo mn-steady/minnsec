@@ -17,7 +17,7 @@ body, html {
   margin: 0;
   padding: 0;
   min-height: 100%; /* Ensure body extends to at least full height of viewport */
-  background-color: #50b948; /* Default background color */
+  background-color: #272b30; 
 }
 
 /* Styles for the Menu Bar */
@@ -78,7 +78,7 @@ body, html {
 
 /* Default container background color and centering */
 .container {
-  background-color: #1c1e22; /* Set the background to #50b948 */
+  background-color: #272b30; 
   margin-top: 50px; /* Ensure content isn't hidden under the fixed menu */
   padding: 0px; /* Optional: add padding if needed */
   display: flex;
