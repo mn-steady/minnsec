@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
-    # Debug output to inspect the request environment and devise mappings
-    # Rails.logger.debug "Devise mapping: #{request.env['devise.mapping']}"
-    # Rails.logger.debug "Current user: #{current_user.inspect}"
+    # Fetch published blog posts to show on the home screen
+    @blog_posts = BlogPost.where(published: true)
   end
 end
+
