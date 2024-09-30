@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # Admin namespace
   namespace :admin do
     resources :users
+    resources :blog_posts
     root to: "users#index"
   end
 
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
     delete "logout", to: "devise/sessions#destroy" # Custom logout route
   end
 
-  # BlogPost routes
+  # BlogPost routes for users
   resources :blog_posts, only: [:index, :show]
 
   # Health check
