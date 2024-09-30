@@ -1,12 +1,6 @@
 <!-- Display the image only if the user is not signed in -->
-<% unless user_signed_in? %>
-  <%= image_tag "rocket.gif", id: "fullscreen-image" %>
-<% end %>
-
-<!-- Other content of the home screen -->
-
-<!-- Display blog posts only if the user is signed in -->
 <% if user_signed_in? %>
+  <!-- Show blog posts for authenticated users -->
   <h2>Andrew Was Bored</h2>
 
   <% if @blog_posts.any? %>
@@ -20,4 +14,7 @@
   <% else %>
     <p>No blog posts to display.</p>
   <% end %>
+<% else %>
+  <!-- Show image for unauthenticated users -->
+  <%= image_tag "rocket.gif", id: "fullscreen-image" %>
 <% end %>
