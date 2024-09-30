@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     delete "logout", to: "devise/sessions#destroy" # Custom logout route
   end
 
+  # BlogPost routes
+  resources :blog_posts, only: [:index, :show]
+
   # Health check
   get "up" => "rails/health#show", as: :rails_health_check
 
