@@ -20,6 +20,20 @@ body, html {
   background-color: #1c1e22; /* Background color */
 }
 
+/* Global Link Styling */
+a {
+  color: #1c1e22; /* Default color for all links */
+  text-decoration: none; /* Removes underline */
+}
+
+a:hover {
+  color: #50b948; /* Optional hover color for links */
+}
+
+a:visited {
+  color: #272b30; /* Changes color after the link is clicked */
+}
+
 /* Styles for the Menu Bar */
 #menu-bar {
   position: fixed; /* Anchors the menu at the top */
