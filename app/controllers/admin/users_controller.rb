@@ -2,16 +2,22 @@ module Admin
   class UsersController < Admin::ApplicationController
     # Override `resource_params` to permit custom attributes.
     def resource_params
-      params.require(:user).permit(
+      permitted_params = params.require(:user).permit(
         :email, 
         :password, 
         :password_confirmation, 
         :first_name, 
         :last_name, 
         :display_name, 
-        :phone_number, 
-        :admin
+        :phone_number
       )
+
+      # Only allow admins to update the `admin` attribute
+      if current_user.admin?
+        permitted_params[:admin] = params[:user][:admin]
+      end
+
+      permitted_params
     end
 
     # Optionally, you can also override other actions like update, create, etc., if necessary.
