@@ -23,7 +23,7 @@ gem "jbuilder"
 gem "devise"
 
 # Administrate fields for active storage
-gem "administrate", "~> 0.18.0"
+gem "administrate", "~> 0.20.1"
 gem "administrate-field-active_storage", "~> 0.4.2"
 
 # Bcrypt
