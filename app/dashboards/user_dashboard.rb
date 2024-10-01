@@ -20,7 +20,7 @@ class UserDashboard < Administrate::BaseDashboard
     first_name: Field::String,
     last_name: Field::String,
     display_name: Field::String,
-    phone_number: Field::String,
+    phone_number: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES

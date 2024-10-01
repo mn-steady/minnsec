@@ -1,5 +1,5 @@
 class BlogPostsController < ApplicationController
-  before_action :authenticate_user!, only: [:index]
+  before_action :authenticate_user!, only: [ :index ]
 
   def index
     @blog_posts = BlogPost.all

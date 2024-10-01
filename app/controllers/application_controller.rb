@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   # Add the custom fields to the permitted parameters for Devise.
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :display_name, :phone_number])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :display_name, :phone_number])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ :first_name, :last_name, :display_name, :phone_number ])
+    devise_parameter_sanitizer.permit(:account_update, keys: [ :first_name, :last_name, :display_name, :phone_number ])
   end
 end

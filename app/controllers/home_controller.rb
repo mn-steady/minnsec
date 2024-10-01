@@ -4,4 +4,3 @@ class HomeController < ApplicationController
     @blog_posts = BlogPost.where(published: true)
   end
 end
-

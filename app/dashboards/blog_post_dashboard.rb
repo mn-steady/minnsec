@@ -8,7 +8,7 @@ class BlogPostDashboard < Administrate::BaseDashboard
     title: Field::String,
     content: Field::Text,
     published: Field::Boolean,
-    user: Field::BelongsTo.with_options(searchable: true, searchable_field: 'email'),
+    user: Field::BelongsTo.with_options(searchable: true, searchable_field: "email"),
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze

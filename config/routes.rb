@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :blog_posts # Add this line
     root to: "users#index"
   end
-  
+
 
   # Devise routes
   devise_for :users, controllers: { sessions: "devise/sessions" }
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   # BlogPost routes
-  resources :blog_posts, only: [:index, :show]
+  resources :blog_posts, only: [ :index, :show ]
 
   # Health check
   get "up" => "rails/health#show", as: :rails_health_check

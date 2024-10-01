@@ -4,7 +4,7 @@ module Admin
     def create
       blog_post = BlogPost.new(blog_post_params)
       blog_post.user = current_user # Assign the current logged-in admin user as the author
-      
+
       if blog_post.save
         redirect_to admin_blog_post_path(blog_post), notice: "Blog Post was successfully created."
       else
@@ -16,7 +16,7 @@ module Admin
     def update
       blog_post = find_resource(params[:id])
       blog_post.user = current_user # Ensure the current user is associated on update as well
-      
+
       if blog_post.update(blog_post_params)
         redirect_to admin_blog_post_path(blog_post), notice: "Blog Post was successfully updated."
       else
