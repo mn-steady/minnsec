@@ -98,8 +98,8 @@ body, html {
 }
 
 /* Blog post container styling */
-.blog-post-container {
-  background-color: #1c1e22; /* Dark background for blog posts */
+.blog-posts-container {
+  background-color: #50b948; /* Green background for blog posts */
   padding: 20px; /* Padding inside the blog posts */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -110,11 +110,11 @@ body, html {
 
 /* Style for blog post titles and text */
 .blog-post h3 {
-  color: #50b948; /* Neon green for blog post titles */
+  color: #1c1e22; /* Dark color for blog post titles */
 }
 
 .blog-post p {
-  color: #ffffff; /* Ensure blog post text is readable on dark background */
+  color: #ffffff; /* Ensure blog post text is readable on green background */
 }
 
 /* Hamburger menu button for mobile */
