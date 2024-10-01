@@ -52,6 +52,10 @@
 
     <!-- Main Content -->
     <div class="container">
+      <% if user_signed_in? %>
+        <p>Hello, <%= current_user.display_name %>!</p>
+      <% end %>
+
       <%= yield %>
     </div>
 

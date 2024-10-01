@@ -1,11 +1,27 @@
 module Admin
   class UsersController < Admin::ApplicationController
+    # Override `resource_params` to permit custom attributes.
+    def resource_params
+      params.require(:user).permit(
+        :email, 
+        :password, 
+        :password_confirmation, 
+        :first_name, 
+        :last_name, 
+        :display_name, 
+        :phone_number, 
+        :admin
+      )
+    end
+
+    # Optionally, you can also override other actions like update, create, etc., if necessary.
+
     # Overwrite any of the RESTful controller actions to implement custom behavior
-    # For example, you may want to send an email after a foo is updated.
+    # For example, you may want to send an email after a user is updated.
     #
     # def update
     #   super
-    #   send_foo_updated_email(requested_resource)
+    #   send_user_updated_email(requested_resource)
     # end
 
     # Override this method to specify custom lookup behavior.
@@ -13,7 +29,7 @@ module Admin
     # actions.
     #
     # def find_resource(param)
-    #   Foo.find_by!(slug: param)
+    #   User.find_by!(slug: param)
     # end
 
     # The result of this lookup will be available as `requested_resource`
@@ -25,22 +41,8 @@ module Admin
     #   if current_user.super_admin?
     #     resource_class
     #   else
-    #     resource_class.with_less_stuff
+    #     resource_class.where(admin: false)
     #   end
     # end
-
-    # Override `resource_params` if you want to transform the submitted
-    # data before it's persisted. For example, the following would turn all
-    # empty values into nil values. It uses other APIs such as `resource_class`
-    # and `dashboard`:
-    #
-    # def resource_params
-    #   params.require(resource_class.model_name.param_key).
-    #     permit(dashboard.permitted_attributes).
-    #     transform_values { |value| value == "" ? nil : value }
-    # end
-
-    # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
-    # for more information
   end
 end

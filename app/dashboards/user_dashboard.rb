@@ -16,7 +16,11 @@ class UserDashboard < Administrate::BaseDashboard
     reset_password_token: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
-    admin: Field::Boolean
+    admin: Field::Boolean,
+    first_name: Field::String,
+    last_name: Field::String,
+    display_name: Field::String,
+    phone_number: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -27,10 +31,10 @@ class UserDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     email
-    encrypted_password
-    reset_password_sent_at
-    created_at
-    updated_at
+    first_name
+    last_name
+    display_name
+    phone_number
     admin
   ].freeze
 
@@ -39,7 +43,10 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     email
-    encrypted_password
+    first_name
+    last_name
+    display_name
+    phone_number
     remember_created_at
     reset_password_sent_at
     reset_password_token
@@ -52,33 +59,25 @@ class UserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    id
     email
-    encrypted_password
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    created_at
-    updated_at
+    first_name
+    last_name
+    display_name
+    phone_number
+    password
+    password_confirmation
     admin
   ].freeze
 
   # COLLECTION_FILTERS
   # a hash that defines filters that can be used while searching via the search
   # field of the dashboard.
-  #
-  # For example to add an option to search for open resources by typing "open:"
-  # in the search field:
-  #
-  #   COLLECTION_FILTERS = {
-  #     open: ->(resources) { resources.where(open: true) }
-  #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
   # Overwrite this method to customize how users are displayed
   # across all pages of the admin dashboard.
   #
   # def display_resource(user)
-  #   "User ##{user.id}"
+  #   "User ##{user.display_name || user.email}"
   # end
 end
