@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Admin namespace
   namespace :admin do
     resources :users
-    resources :blog_posts # Add this line
+    resources :blog_posts 
     root to: "users#index"
   end
 

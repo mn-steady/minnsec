@@ -1,11 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
-  content: MyText
+  title: "My first blog post"
+  content: "This is the content of the first blog post."
   published: false
+  user: one  # Refers to the `one` user in your `users.yml`
 
 two:
-  title: MyString
-  content: MyText
-  published: false
+  title: "Another blog post"
+  content: "This is the content of another blog post."
+  published: true
+  user: two  # Refers to the `two` user in your `users.yml`
