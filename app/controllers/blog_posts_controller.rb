@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :new, :create]
-  before_action :require_admin, only: [:new, :create]
+  before_action :authenticate_user!, only: [ :index, :new, :create ]
+  before_action :require_admin, only: [ :new, :create ]
 
   def index
     @blog_posts = BlogPost.order(created_at: :desc) # Display blog posts by newest first
