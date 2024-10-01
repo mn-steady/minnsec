@@ -58,10 +58,9 @@ a:visited {
 .username-display {
   color: #50b948; /* Neon green color to match the other links */
   font-weight: bold; /* Make the text bold */
-  font-size: 18px; /* Same size as the other menu items */
+  font-size: 16px; /* Same size as the other menu items */
   margin-left: 20px; /* Add some space between the logo and the username */
   display: inline-block; /* Keep it inline with the logo */
-  line-height: 50px; /* Vertically align with the logo */
 }
 
 /* Hide the username display on mobile */
