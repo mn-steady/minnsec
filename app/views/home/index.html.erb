@@ -1,11 +1,10 @@
-<!-- Display the image only if the user is not signed in -->
 <% if user_signed_in? %>
   <!-- Show blog posts for authenticated users -->
   <h2>Andrew Was Bored</h2>
 
   <% if @blog_posts.any? %>
     <% @blog_posts.each do |post| %>
-      <div class="blog-post">
+      <div class="blog-post-container"> <!-- Apply the new CSS class -->
         <h3><%= link_to post.title, blog_post_path(post) %></h3>
         <p><%= truncate(post.content, length: 100) %></p>
         <hr>
