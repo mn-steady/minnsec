@@ -27,11 +27,11 @@ a {
 }
 
 a:hover {
-  color: #50b948; /* Optional hover color for links */
+  color: #50b948; /* Hover color for links */
 }
 
 a:visited {
-  color: #272b30; /* Changes color after the link is clicked */
+  color: #272b30; /* Color after the link is clicked */
 }
 
 /* Styles for the Menu Bar */
@@ -62,6 +62,13 @@ a:visited {
   margin-left: 20px; /* Add some space between the logo and the username */
   display: inline-block; /* Keep it inline with the logo */
   line-height: 50px; /* Vertically align with the logo */
+}
+
+/* Hide the username display on mobile */
+@media (max-width: 768px) {
+  .username-display {
+    display: none;
+  }
 }
 
 #menu-bar .navbar-logo img {
