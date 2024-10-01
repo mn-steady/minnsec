@@ -12,14 +12,14 @@ module Admin
 
     # Parameters for user creation
     def create_params
-      permitted_params = [:email, :first_name, :last_name, :display_name, :phone_number, :password, :password_confirmation]
+      permitted_params = [ :email, :first_name, :last_name, :display_name, :phone_number, :password, :password_confirmation ]
       permitted_params << :admin if current_user.admin? # Only allow admin to set the admin flag
       params.require(:user).permit(permitted_params)
     end
 
     # Parameters for user updates
     def update_params
-      permitted_params = [:email, :first_name, :last_name, :display_name, :phone_number]
+      permitted_params = [ :email, :first_name, :last_name, :display_name, :phone_number ]
       permitted_params << :password << :password_confirmation if password_present?
       permitted_params << :admin if current_user.admin? # Only allow admin to update the admin flag
       params.require(:user).permit(permitted_params)
