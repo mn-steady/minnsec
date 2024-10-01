@@ -54,6 +54,16 @@ a:visited {
   align-items: center; /* Vertically center both the logo and the text */
 }
 
+/* Style for the username display in the menu bar */
+.username-display {
+  color: #50b948; /* Neon green color to match the other links */
+  font-weight: bold; /* Make the text bold */
+  font-size: 18px; /* Same size as the other menu items */
+  margin-left: 20px; /* Add some space between the logo and the username */
+  display: inline-block; /* Keep it inline with the logo */
+  line-height: 50px; /* Vertically align with the logo */
+}
+
 #menu-bar .navbar-logo img {
   max-height: 50px; /* Adjust logo height */
   width: auto; /* Maintain aspect ratio */
