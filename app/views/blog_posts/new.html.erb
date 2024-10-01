@@ -1,0 +1,35 @@
+<div class="blog-posts-container">
+    <h1>New Blog Post</h1>
+
+    <%= form_for @blog_post do |f| %>
+    <% if @blog_post.errors.any? %>
+        <div id="error_explanation">
+        <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog post from being saved:</h2>
+        <ul>
+            <% @blog_post.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </div>
+
+    <div class="field">
+        <%= f.label :content %>
+        <%= f.text_area :content %>
+    </div>
+
+    <div class="field">
+        <%= f.label :published %>
+        <%= f.check_box :published %>
+    </div>
+
+    <div class="actions">
+        <%= f.submit "Create Blog Post" %>
+    </div>
+    <% end %>
+</div>
