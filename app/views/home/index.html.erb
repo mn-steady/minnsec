@@ -1,13 +1,17 @@
 <% if user_signed_in? %>
   <!-- Show blog posts for authenticated users -->
-  <div class="blog-posts-container"> <!-- Wrap h2 and blog posts in the same container -->
-    <h1>Andrew Was Bored.</h1>
+  <div class="blog-posts-container"> 
+    <h1>Andrew Was Bored.</h1> 
     <h2>Recent Posts:</h2>
 
     <% if @blog_posts.any? %>
-      <% @blog_posts.each do |post| %>
+      <!-- Sort posts by newest -->
+      <% @blog_posts.order(created_at: :desc).each do |post| %>
         <div class="blog-post">
-          <h3><%= link_to post.title, blog_post_path(post) %></h3>
+          <div class="blog-post-header">
+            <h3 class="post-date"><%= post.created_at.strftime("%B %d, %Y") %></h3>
+            <h3 class="post-title"><%= link_to post.title, blog_post_path(post) %></h3>
+          </div>
           <p><%= truncate(post.content, length: 100) %></p>
           <hr>
         </div>

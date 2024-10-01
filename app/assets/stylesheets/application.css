@@ -137,26 +137,49 @@ a:visited {
   max-width: 800px; /* Set a max width for blog posts */
   width: 100%; /* Ensure the blog posts are responsive */
   margin: 20px auto; /* Center the blog posts with some margin */
-  text-align: center; /* Center all text within this container */
 }
 
-/* Style for blog post titles and text within the blog-posts-container */
+/* Center the blog post title */
 .blog-posts-container h1 {
   color: #1c1e22;
+  text-align: center;
 }
 
+/* Align recent posts to the left */
 .blog-posts-container h2 {
   color: #1c1e22;
-  text-align: left; /* Align h2 elements to the left */
+  text-align: left;
 }
 
-.blog-posts-container h3 {
+/* Style for the post header with date and title */
+.blog-post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* Style for the post date on the left */
+.blog-post-header .post-date {
   color: #1c1e22;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  flex: 1; /* Take up available space on the left */
 }
 
+/* Center the post title */
+.blog-post-header .post-title {
+  color: #1c1e22;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  flex: 2; /* Take up twice the space of the date, ensuring it's centered */
+}
+
+/* Style for blog post content */
 .blog-posts-container p {
   color: #1c1e22; /* Ensure blog post text is readable on the green background */
-  text-align: left; /* Align h2 elements to the left */
 }
 
 /* Hamburger menu button for mobile */
