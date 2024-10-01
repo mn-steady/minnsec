@@ -26,8 +26,8 @@ gem "devise"
 gem "administrate", "~> 0.18.0"
 gem "administrate-field-active_storage", "~> 0.4.2"
 
-#Bcrypt 
-gem 'bcrypt', '~> 3.1.7'
+# Bcrypt
+gem "bcrypt", "~> 3.1.7"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
