@@ -1,13 +1,15 @@
-<h1>Blog Posts</h1>
+<div class="blog-posts-container">
+  <h1>Blog Posts</h1>
 
-<% if @blog_posts.any? %>
-  <% @blog_posts.each do |post| %>
-    <div class="blog-post">
-      <h3><%= link_to post.title, blog_post_path(post) %></h3>
-      <p><%= truncate(post.content, length: 100) %></p>
-      <hr>
-    </div>
+  <% if @blog_posts.any? %>
+    <% @blog_posts.each do |post| %>
+      <div class="blog-post">
+        <h3><%= link_to post.title, blog_post_path(post) %></h3>
+        <p><%= truncate(post.content, length: 100) %></p>
+        <hr>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No blog posts to display.</p>
   <% end %>
-<% else %>
-  <p>No blog posts to display.</p>
-<% end %>
+</div>

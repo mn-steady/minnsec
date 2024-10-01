@@ -1,5 +1,7 @@
-<h1><%= @blog_post.title %></h1>
+<div class="blog-posts-container">
+    <h1><%= @blog_post.title %></h1>
 
-<p><%= @blog_post.content %></p>
+    <p><%= @blog_post.content %></p>
 
-<%= link_to 'Back to All Posts', blog_posts_path %>
+    <%= link_to 'Back to All Posts', blog_posts_path %>
+</div>
