@@ -139,6 +139,12 @@ a:visited {
   margin: 20px auto; /* Center the blog posts with some margin */
 }
 
+/* Style for the horizontal line between blog posts */
+.blog-post hr {
+  border: 1px solid #1c1e22; /* Match the color of the h2 headers */
+  margin: 20px 0; /* Add some space around the line */
+}
+
 /* Center the blog post title */
 .blog-posts-container h1 {
   color: #1c1e22;
