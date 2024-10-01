@@ -2,7 +2,7 @@ require "test_helper"
 
 class BlogPostsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @blog_post = blog_posts(:one) 
+    @blog_post = blog_posts(:one)
   end
 
   test "should get index" do
