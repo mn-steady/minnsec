@@ -106,15 +106,24 @@ body, html {
   max-width: 800px; /* Set a max width for blog posts */
   width: 100%; /* Ensure the blog posts are responsive */
   margin: 20px auto; /* Center the blog posts with some margin */
+  text-align: center; /* Center all text within this container */
 }
 
-/* Style for blog post titles and text */
-.blog-post h3 {
-  color: #1c1e22; /* Dark color for blog post titles */
+/* Style for blog post titles and text within the blog-posts-container */
+.blog-posts-container h1 {
+  color: #1c1e22;
 }
 
-.blog-post p {
-  color: #ffffff; /* Ensure blog post text is readable on green background */
+.blog-posts-container h2 {
+  color: #1c1e22;
+}
+
+.blog-posts-container h3 {
+  color: #1c1e22;
+}
+
+.blog-posts-container p {
+  color: #1c1e22; /* Ensure blog post text is readable on the green background */
 }
 
 /* Hamburger menu button for mobile */
