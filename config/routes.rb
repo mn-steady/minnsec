@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   # Admin namespace
   namespace :admin do
     resources :users
+    resources :blog_posts # Add this line
     root to: "users#index"
   end
+  
 
   # Devise routes
   devise_for :users, controllers: { sessions: "devise/sessions" }
