@@ -125,6 +125,7 @@ body, html {
 
 .blog-posts-container p {
   color: #1c1e22; /* Ensure blog post text is readable on the green background */
+  text-align: left; /* Align h2 elements to the left */
 }
 
 /* Hamburger menu button for mobile */
