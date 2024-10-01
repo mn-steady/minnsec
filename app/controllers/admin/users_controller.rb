@@ -1,27 +1,26 @@
 module Admin
   class UsersController < Admin::ApplicationController
-
     def resource_params
-      if action_name == 'create'
+      if action_name == "create"
         # Require all fields when creating a new user
         params.require(:user).permit(
-          :email, 
-          :first_name, 
-          :last_name, 
-          :display_name, 
-          :phone_number, 
-          :admin, 
-          :password, 
+          :email,
+          :first_name,
+          :last_name,
+          :display_name,
+          :phone_number,
+          :admin,
+          :password,
           :password_confirmation
         )
       else
         # Allow updates without requiring any fields
         permitted_params = params.require(:user).permit(
-          :email, 
-          :first_name, 
-          :last_name, 
-          :display_name, 
-          :phone_number, 
+          :email,
+          :first_name,
+          :last_name,
+          :display_name,
+          :phone_number,
           :admin
         )
 

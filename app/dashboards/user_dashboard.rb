@@ -14,7 +14,7 @@ class UserDashboard < Administrate::BaseDashboard
     password: Field::String.with_options(searchable: false), # Virtual field for form
     password_confirmation: Field::String.with_options(searchable: false), # Virtual field for form
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
