@@ -1,11 +1,20 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the "{}" from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+# This model now includes first_name, last_name, email, etc.
+# Make sure that each user has unique attributes, especially for fields like `email`.
+
+one:
+  first_name: "John"
+  last_name: "Doe"
+  email: "john@example.com"
+  password_digest: <%= User.digest('password') %>
+  phone_number: "123-456-7890"
+  admin: false
+
+two:
+  first_name: "Jane"
+  last_name: "Doe"
+  email: "jane@example.com"
+  password_digest: <%= User.digest('password') %>
+  phone_number: "098-765-4321"
+  admin: false
