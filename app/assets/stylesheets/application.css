@@ -139,8 +139,8 @@ a:visited {
   margin: 20px auto; /* Center the blog posts with some margin */
 }
 
-/* Style for the horizontal line between blog posts */
-.blog-post hr {
+
+.blog-posts-container hr {
   border: 1px solid #1c1e22; /* Match the color of the h2 headers */
   margin: 20px 0; /* Add some space around the line */
 }
@@ -186,6 +186,12 @@ a:visited {
 /* Style for blog post content */
 .blog-posts-container p {
   color: #1c1e22; /* Ensure blog post text is readable on the green background */
+}
+
+/* Style for the horizontal line between blog posts */
+.blog-post hr {
+  border: 1px solid #1c1e22; /* Match the color of the h2 headers */
+  margin: 20px 0; /* Add some space around the line */
 }
 
 /* Hamburger menu button for mobile */
