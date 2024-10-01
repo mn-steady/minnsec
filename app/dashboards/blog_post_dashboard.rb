@@ -12,7 +12,7 @@ class BlogPostDashboard < Administrate::BaseDashboard
     content: Field::Text,
     published: Field::Boolean,
     title: Field::String,
-    user: Field::BelongsTo,
+    user: Field::BelongsTo, # Ensure we can assign a user to a blog post
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -24,19 +24,19 @@ class BlogPostDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    content
-    published
     title
+    user # Show the user associated with the blog post
+    published
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
+    title
     content
     published
-    title
-    user
+    user # Display the user
     created_at
     updated_at
   ].freeze
@@ -45,10 +45,10 @@ class BlogPostDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
+    title
     content
     published
-    title
-    user
+    user # Allow assigning a user to the blog post
   ].freeze
 
   # COLLECTION_FILTERS
@@ -67,6 +67,6 @@ class BlogPostDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
   # def display_resource(blog_post)
-  #   "BlogPost ##{blog_post.id}"
+  #   "Blog Post ##{blog_post.id}"
   # end
 end
