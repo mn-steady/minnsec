@@ -118,14 +118,19 @@ a:visited {
 }
 
 
-/* Form container styling */
+/* Login form container */
 .form-container {
   background-color: #50b948; /* Same neon green */
-  padding: 20px; /* Padding inside the form */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 400px; /* Set a max width for the form */
   width: 100%; /* Ensure the form is responsive */
+  margin: 0 auto; /* Horizontally center the form */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align form elements */
+  justify-content: center; /* Vertically center form contents */
 }
 
 /* Blog post container styling */
@@ -210,6 +215,38 @@ a:visited {
 .about-page-container h1, .about-page-container h2, .about-page-container h3, .about-page-container p {
   color: #1c1e22; /* Same black color as blog post titles */
 }
+
+/* Basic button styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #50b948; /* Green text color */
+  background-color: #272b30; /* Dark background */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover, 
+.btn:focus, 
+.btn:active, 
+.btn:visited {
+  background-color: #272b30; /* Dark background remains the same */
+  color: #50b948; /* Green text color remains the same */
+}
+
+/* Ensure buttons have spacing between them */
+.button-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 
 /* Hamburger menu button for mobile */
 .navbar-toggler {
