@@ -28,6 +28,8 @@
       <div class="navbar-logo">
         <!-- Logo -->
         <%= link_to image_tag(asset_path('minnsec-logo-name-small.png'), alt: 'MinnSec Logo', class: 'logo'), root_path %>
+
+        <!-- UserName -->
         <% if user_signed_in? %>
           <p class="username-display">Welcome Back, <%= current_user.display_name %>!</p>
         <% end %>

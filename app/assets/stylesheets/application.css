@@ -117,6 +117,7 @@ a:visited {
   min-height: 100vh; /* Ensure container stretches to full viewport height */
 }
 
+
 /* Form container styling */
 .form-container {
   background-color: #50b948; /* Same neon green */
@@ -193,18 +194,6 @@ a:visited {
   margin: 20px 0; /* Add some space around the line */
 }
 
-/* Hamburger menu button for mobile */
-.navbar-toggler {
-  display: none; /* Hidden by default */
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: #50b948; /* Same neon green */
-  cursor: pointer;
-  padding-right: 20px; /* Add padding to the right when closed */
-  transition: padding-right 0.3s ease; /* Smooth transition for padding */
-}
-
 /* About page container styling */
 .about-page-container {
   background-color: #50b948; /* Same green background as blog posts */
@@ -220,6 +209,18 @@ a:visited {
 
 .about-page-container h1, .about-page-container h2, .about-page-container h3, .about-page-container p {
   color: #1c1e22; /* Same black color as blog post titles */
+}
+
+/* Hamburger menu button for mobile */
+.navbar-toggler {
+  display: none; /* Hidden by default */
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #50b948; /* Same neon green */
+  cursor: pointer;
+  padding-right: 20px; /* Add padding to the right when closed */
+  transition: padding-right 0.3s ease; /* Smooth transition for padding */
 }
 
 /* Mobile responsiveness */
