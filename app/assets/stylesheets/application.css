@@ -205,6 +205,23 @@ a:visited {
   transition: padding-right 0.3s ease; /* Smooth transition for padding */
 }
 
+/* About page container styling */
+.about-page-container {
+  background-color: #50b948; /* Same green background as blog posts */
+  color: #1c1e22; /* Black text color */
+  padding: 20px; /* Padding for content */
+  border-radius: 8px; /* Rounded corners similar to blog posts */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px; /* Set a max width like blog posts */
+  width: 100%; /* Ensure responsiveness */
+  margin: 20px auto; /* Center the container */
+  text-align: center; /* Align text to the left */
+}
+
+.about-page-container h1, .about-page-container h2, .about-page-container h3, .about-page-container p {
+  color: #1c1e22; /* Same black color as blog post titles */
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   #menu-bar {
@@ -248,3 +265,5 @@ a:visited {
     margin-right: 0; /* Remove right margin */
   }
 }
+
+

@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  # Static pages route
+  get "about", to: "static#about"
+
   # Admin namespace
   namespace :admin do
     resources :users
     resources :blog_posts
     root to: "users#index"
   end
-
 
   # Devise routes
   devise_for :users, controllers: { sessions: "devise/sessions" }
@@ -17,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   # BlogPost routes
-  resources :blog_posts, only: [ :index, :show, :new, :create ]
+  resources :blog_posts, only: [:index, :show, :new, :create]
 
   # Health check
   get "up" => "rails/health#show", as: :rails_health_check
