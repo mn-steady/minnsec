@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   # BlogPost routes
-  resources :blog_posts, only: [:index, :show, :new, :create]
+  resources :blog_posts, only: [ :index, :show, :new, :create ]
 
   # Health check
   get "up" => "rails/health#show", as: :rails_health_check
