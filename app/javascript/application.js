@@ -2,7 +2,5 @@
 
 import "@hotwired/turbo-rails";
 import "controllers";
-import { start as UJSStart } from "@rails/ujs";
 
-// Initialize Rails UJS to handle non-GET requests like DELETE for logout
-UJSStart();
+// Removed  Rails UJS import as it is now handled by the CDN in the HTML file

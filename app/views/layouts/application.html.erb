@@ -15,6 +15,12 @@
     <!-- Importmap handles all JavaScript dependencies -->
     <%= javascript_importmap_tags %>
 
+    <!-- Rails UJS from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@rails/ujs@6.1.4/lib/assets/compiled/rails-ujs.js"></script>
+    <script>
+      Rails.start();
+    </script>
+
     <!-- Stylesheet -->
     <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
   </head>
