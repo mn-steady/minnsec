@@ -13,6 +13,16 @@
   object-fit: cover; /* Ensures the image covers the entire area without distortion */
 }
 
+@media (max-width: 768px) {
+  #fullscreen-image {
+    object-fit: contain; /* Ensure the image fits inside the viewport without getting cut off */
+    height: 100vh; /* Full height for mobile */
+    width: auto; /* Let the width adjust automatically based on the aspect ratio */
+    max-width: 100vw; /* Ensure the image doesn't exceed the viewport width */
+  }
+}
+
+
 body, html {
   margin: 0;
   padding: 0;
