@@ -1,8 +1,8 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+
 import "@hotwired/turbo-rails";
 import "controllers";
+import { start as UJSStart } from "@rails/ujs";
 
-import Rails from "@rails/ujs";
-
-// Start Rails UJS to handle non-GET requests like DELETE for logout
-Rails.start();
+// Initialize Rails UJS to handle non-GET requests like DELETE for logout
+UJSStart();
