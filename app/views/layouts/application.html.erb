@@ -12,10 +12,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<%= asset_path('favicon.ico') %>">
 
+    <!-- Importmap handles all JavaScript dependencies -->
     <%= javascript_importmap_tags %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
 
+    <!-- Stylesheet -->
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
   </head>
 
   <body>
