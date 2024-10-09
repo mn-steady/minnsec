@@ -1,11 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- *= require_tree .
- *= require_self
- */
-
 /* Fullscreen image */
 #fullscreen-image {
   width: 100vw;  /* 100% of the viewport width */
@@ -21,7 +13,6 @@
     max-width: 100vw; /* Ensure the image doesn't exceed the viewport width */
   }
 }
-
 
 body, html {
   margin: 0;
@@ -127,7 +118,6 @@ a:visited {
   min-height: 100vh; /* Ensure container stretches to full viewport height */
 }
 
-
 /* Login form container */
 .form-container {
   background-color: #50b948; /* Same neon green */
@@ -143,6 +133,52 @@ a:visited {
   justify-content: center; /* Vertically center form contents */
 }
 
+/* Styling for buttons */
+.btn {
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #50b948; /* Green text */
+  background-color: #272b30; /* Dark background */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Full width for buttons */
+  margin-top: 10px; /* Space between buttons */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover, 
+.btn:focus, 
+.btn:active, 
+.btn:visited {
+  background-color: #272b30; /* Keep dark background on interaction */
+  color: #50b948; /* Keep green text color */
+}
+
+/* Forgot password link styling */
+.forgot-password-link {
+  text-align: center;
+  color: #50b948;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Custom HR styling */
+.custom-hr {
+  border: 1px solid #1c1e22; /* Dark line color */
+  width: 100%;
+  margin: 15px 0;
+}
+
+/* Button Links container */
+.button-links {
+  width: 100%;
+  text-align: center;
+}
+
 /* Blog post container styling */
 .blog-posts-container {
   background-color: #50b948; /* Green background for blog posts */
@@ -154,164 +190,76 @@ a:visited {
   margin: 20px auto; /* Center the blog posts with some margin */
 }
 
-
+/* Style for the horizontal line between blog posts */
 .blog-posts-container hr {
   border: 1px solid #1c1e22; /* Match the color of the h2 headers */
-  margin: 20px 0; /* Add some space around the line */
-}
-
-/* Center the blog post title */
-.blog-posts-container h1 {
-  color: #1c1e22;
-  text-align: center;
-}
-
-/* Align recent posts to the left */
-.blog-posts-container h2 {
-  color: #1c1e22;
-  text-align: left;
-}
-
-/* Style for the post header with date and title */
-.blog-post-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-/* Style for the post date on the left */
-.blog-post-header .post-date {
-  color: #1c1e22;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: left;
-  flex: 1; /* Take up available space on the left */
-}
-
-/* Center the post title */
-.blog-post-header .post-title {
-  color: #1c1e22;
-  font-weight: bold;
-  font-size: 22px;
-  text-align: center;
-  flex: 2; /* Take up twice the space of the date, ensuring it's centered */
-}
-
-/* Style for blog post content */
-.blog-posts-container p {
-  color: #1c1e22; /* Ensure blog post text is readable on the green background */
-}
-
-/* Style for the horizontal line between blog posts */
-.blog-post hr {
-  border: 1px solid #1c1e22; /* Match the color of the h2 headers */
-  margin: 20px 0; /* Add some space around the line */
+  margin: 20px 0;
 }
 
 /* About page container styling */
 .about-page-container {
   background-color: #50b948; /* Same green background as blog posts */
-  color: #1c1e22; /* Black text color */
-  padding: 20px; /* Padding for content */
-  border-radius: 8px; /* Rounded corners similar to blog posts */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  max-width: 800px; /* Set a max width like blog posts */
-  width: 100%; /* Ensure responsiveness */
-  margin: 20px auto; /* Center the container */
-  text-align: center; /* Align text to the left */
+  color: #1c1e22;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .about-page-container h1, .about-page-container h2, .about-page-container h3, .about-page-container p {
-  color: #1c1e22; /* Same black color as blog post titles */
+  color: #1c1e22;
 }
-
-/* Basic button styles */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  color: #50b948; /* Green text color */
-  background-color: #272b30; /* Dark background */
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn:hover, 
-.btn:focus, 
-.btn:active, 
-.btn:visited {
-  background-color: #272b30; /* Dark background remains the same */
-  color: #50b948; /* Green text color remains the same */
-}
-
-/* Ensure buttons have spacing between them */
-.button-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
 
 /* Hamburger menu button for mobile */
 .navbar-toggler {
-  display: none; /* Hidden by default */
+  display: none;
   font-size: 30px;
   background: none;
   border: none;
-  color: #50b948; /* Same neon green */
+  color: #50b948;
   cursor: pointer;
-  padding-right: 20px; /* Add padding to the right when closed */
-  transition: padding-right 0.3s ease; /* Smooth transition for padding */
+  padding-right: 20px;
+  transition: padding-right 0.3s ease;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   #menu-bar {
-    flex-direction: row; /* Keep items in a row */
-    justify-content: space-between; /* Keep logo on the left, hamburger on the right */
-    padding: 10px; /* Reduce padding */
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
   }
 
-  /* Align hamburger icon on the right */
   .navbar-toggler {
-    display: block; /* Show hamburger icon */
-    margin-left: auto; /* Push hamburger to the right */
+    display: block;
+    margin-left: auto;
   }
 
-  /* Hide the navbar links initially on mobile */
   #navbar-links {
     display: none;
     flex-direction: column;
-    align-items: flex-end; /* Keep links aligned to the right on mobile */
+    align-items: flex-end;
     width: 100%;
   }
 
-  /* When the menu is active, reduce padding on the right */
   #navbar-links.active ~ .navbar-toggler {
-    padding-right: 5px; /* Reduce padding to bring the hamburger closer to links */
+    padding-right: 5px;
   }
 
-  /* Show the navbar links when "active" class is added */
   #navbar-links.active {
-    display: flex; /* Display links as flex */
-    flex-direction: column; /* Stack links vertically */
-    align-items: flex-end; /* Align links to the right */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   #menu-bar .navbar ul li {
-    margin-left: 0; /* Remove left margin between links */
-    margin-bottom: 10px; /* Add space between links */
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 
   #menu-bar .navbar ul li:last-child {
-    margin-right: 0; /* Remove right margin */
+    margin-right: 0;
   }
 }
-
-
