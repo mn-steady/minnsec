@@ -158,6 +158,24 @@ a:visited {
   color: #50b948; /* Keep green text color */
 }
 
+/* Full-width input field container */
+.field {
+  width: 100%;
+  margin-bottom: 10px; /* Optional: Add some space between fields */
+}
+
+/* Full-width input and button styling */
+.full-width-input {
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.full-width-button {
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's width */
+  margin-top: 10px;
+}
+
 /* Forgot password link styling */
 .forgot-password-link {
   text-align: center;
