@@ -77,7 +77,7 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 
   config.assets.debug = true
-  config.assets.digest = false
+  config.assets.digest = true
   config.assets.compile = true
   config.assets.css_compressor = nil
 
