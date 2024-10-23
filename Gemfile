@@ -24,7 +24,7 @@ gem "devise"
 
 # Administrate fields for active storage
 gem "administrate", "~> 0.20.1"
-gem "administrate-field-active_storage", "~> 0.4.2"
+gem "administrate-field-active_storage", "~> 1.0.3"
 
 # Bcrypt
 gem "bcrypt", "~> 3.1.7"

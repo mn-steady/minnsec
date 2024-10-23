@@ -81,7 +81,7 @@ GEM
       kaminari (~> 1.2.2)
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
-    administrate-field-active_storage (0.4.2)
+    administrate-field-active_storage (1.0.3)
       administrate (>= 0.2.2)
       rails (>= 7.0)
     ast (2.4.2)
@@ -328,7 +328,7 @@ PLATFORMS
 
 DEPENDENCIES
   administrate (~> 0.20.1)
-  administrate-field-active_storage (~> 0.4.2)
+  administrate-field-active_storage (~> 1.0.3)
   bcrypt (~> 3.1.7)
   bootsnap
   brakeman
